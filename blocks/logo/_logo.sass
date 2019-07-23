@@ -1,0 +1,59 @@
+.logo
+    position: relative
+    z-index: 2
+    padding: 53px 0
+    &_wraper
+        width: 100%
+        grid-area: 1 / 1 / 2 / 3
+    &_box
+        &-logo
+            grid-column:  1 / span 3
+            display: flex
+            align-items: center
+        &-nav
+            grid-column:  4 / span 7
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding: 0px 56px 0 35px
+        &-social
+            grid-column:  11 / span 2
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding-left: 34px
+        &_a
+            text-decoration: none
+            color: #ffffff
+            font-family: $GothamBook
+            font-weight: 400
+            font-size: 14px
+            text-transform: uppercase 
+            margin-left: 14px        
+    &_ball
+        width: 8px
+        height: 8px
+        border: 1px solid #ffffff
+        border-radius: 50%
+        // margin-bottom: 2px
+.nav_wraper
+    height: 100%
+    display: flex
+    align-items: center
+.mod-icon
+    border: 1px solid #b19dfb
+    display: flex
+    justify-content: space-between
+    border-radius: 50%
+    width: 39px
+    height: 39px
+    align-items: center
+    justify-content: center
+    text-decoration: none
+    color: #F5FFFA 
+    &:hover
+        border-color: #ffffff
+        transition: border ease 0.3s
+  
+
+

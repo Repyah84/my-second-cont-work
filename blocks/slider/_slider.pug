@@ -1,0 +1,19 @@
+mixin slider(items)
+    .slider_contaainer
+        .slider
+            each item in items
+                .slider_wraper
+                    img.slider_img(src= item.img)
+                    .slider_box
+                        h2.slider_h2= item.sl_h2
+                        p.slider_p= item.sl_p
+                        .slider_box_person
+                            .slider_box_foto
+                                img.slider_img(src= item.foto)
+                            .slider_box_text
+                                h3.slider_h3= item.fText
+                                p.slider_data= item.data
+        button.slider_button_prev
+            i.fas(class="fa-angle-left")                         
+        button.slider_button_next
+            i.fas(class="fa-angle-right")               

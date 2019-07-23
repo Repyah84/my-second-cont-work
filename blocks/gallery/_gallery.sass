@@ -1,0 +1,51 @@
+.gallery
+    background: #ffffff
+    text-align: center
+    padding: 132px 0 139px 0
+    &_hr
+        max-width: 100px
+    &_h2
+        color: #2c4058
+        font-family: $Gotham
+        font-size: 44px
+        font-weight: 700
+        line-height: 22px
+        text-transform: uppercase
+        margin-top: 46px
+    &_wraper
+        margin-top: 103px        
+    &_conteiner
+        grid-column: 1 / span 12
+    &_grid
+        display: grid
+        grid-template-columns: 1fr 10px 1fr 10px 1fr 10px 1fr
+        grid-template-rows: 1fr 10px 1fr
+        &_img
+            display: block
+            width: 100%
+            object-fit: cover
+    &_wraper_img
+        position: relative
+        &:hover
+            cursor: pointer
+            &::after
+                content: ''
+                display: block
+                width: 80px
+                height: 80px
+                position: absolute
+                top: 50%
+                margin-top: -40px
+                right: 50%
+                margin-right: -40px
+                background: url(../img/360.png)
+    &_wraper_img:first-child
+        grid-area: 1 / 1 / 4 / 4
+    &_wraper_img:nth-child(2)
+            grid-area: 1 / 5 / 2 / 6
+    &_wraper_img:nth-child(3)
+        grid-area: 1 / 7 / 2 / 8
+    &_wraper_img:nth-child(4)
+        grid-area: 3 / 5 / 4 / 6
+    &_wraper_img:last-child
+        grid-area: 3 / 7 / 4 / 8

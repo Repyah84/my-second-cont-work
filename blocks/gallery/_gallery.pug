@@ -1,0 +1,11 @@
+mixin gallery(_h2, items, button_class)
+    .conteiner(class ="gallery")
+        hr.gallery_hr
+        h2.gallery_h2= _h2
+        .grid(class='gallery_wraper')
+            .gallery_conteiner
+                .gallery_grid
+                    each item in items
+                        .gallery_wraper_img
+                            img.gallery_grid_img(src= item)
+        button.button(class= button_class) see more 

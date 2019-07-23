@@ -1,0 +1,36 @@
+include blocks/_blocks.pug
+include varibals.pug
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title My vorck
+        link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.8.1/css/all.css", integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf", crossorigin="anonymous")
+        link(rel="stylesheet", href="./css/style.css")
+        link(rel="stylesheet", href="./slick/slick.css")
+        link(rel="stylesheet", href="./slick/slick-theme.css")
+    body
+        .conteiner(class= "wraper_header")
+            .logo_wraper
+                +logo(logoNavLinks)
+            .header_slider
+                +header(headerSliderBlock)
+            .scrol_wraper    
+                +scrol   
+        +whatWeDo('What we do' ,whotWeDo_first_flore, whotWeDo_second_flore,'button-whatWeDo')
+        +latestNews('./img/sity.png')
+            hr.latestNews_hr 
+            h2.latestNews_h2 latest news 
+            +slider(sliderElem)
+        +gallery('gallery', gallery, 'button-gallery')
+        +futer('./img/bac-futer.png')
+            +map
+            +contact('Copyrights © 2017 Monticello')
+            +form('get in touch', 'submit')
+        script(async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQDEK_bp8E3TJz1Sg1VMqF7jn8J3Z7Haw")    
+        script(src="https://code.jquery.com/jquery-3.4.1.min.js", integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=", crossorigin="anonymous")
+        script(src="./slick/slick.min.js")
+        script(src="./js/script-dist.js")

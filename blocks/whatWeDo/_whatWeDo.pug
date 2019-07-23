@@ -1,0 +1,30 @@
+mixin whatWeDo(text_h2, first_items, second_items, button)
+    .conteiner(class= "whatWeDo", id= "projects")
+        hr._hr
+        h2._h2= text_h2
+        .grid(class= "whatWeDo-first")
+            each item in first_items
+                .whatWeDo_box(class= "first-box-img")
+                    .back_box(class= "back_box-first")
+                    img(src= item.img).whatWeDo_box_img
+                .whatWeDo_box(class= "first-box-text")
+                    h3.whatWeDo_box_h3= item.text_h3
+                    h2.whatWeDo_box_h2= item.text_h2
+                    p.whatWeDo_box_p= item.text_p
+                    button.button(class= button)= item.b_text
+                    .whatWeDo_box_wraper
+                        i.fas(class= "fa-map-marker-alt")
+                        a.whatWeDo_box_a(href= "#")= item.a_text
+        .grid(class= "whatWeDo-second")            
+            each item in second_items 
+                .whatWeDo_box(class= "second-box-text")
+                    h3.whatWeDo_box_h3= item.text_h3
+                    h2.whatWeDo_box_h2= item.text_h2
+                    p.whatWeDo_box_p= item.text_p
+                    button.button(class= button)= item.b_text
+                    .whatWeDo_box_wraper
+                        i.fas(class= "fa-map-marker-alt")
+                        a.whatWeDo_box_a(href= "#")= item.a_text     
+                .whatWeDo_box(class= "second-box-img")
+                    .back_box(class= "back_box-second")
+                    img.whatWeDo_box_img(src= item.img)   

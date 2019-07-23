@@ -1,0 +1,24 @@
+mixin form(_h2, bValue)
+    form.form(action= "#", name= "form")
+        hr.form_hr
+        h2.form_h2= _h2
+        .form_wraper
+            .form_box(class ="form_box-contact")
+                a.form_a(href= "#")
+                    i.fas(class= "fa-map-marker-alt")
+                    text 91 Nolan Extensions Suite 670
+                a.form_a(href= "#")
+                    i.fas(class= "fa-phone-volume")
+                    text +001 356-868-2454
+                a.form_a(href= "#")
+                    i.fas(class= "fa-inbox")
+                    text gahuy93@gmail.com
+                a.form_a(href= "#")
+                    i.fas(class= "far fa-clock")
+                    text From 07:05AM to 19:30PM
+            .form_box(class= "form_box-wraper")        
+                .form_box(class ="form_box-send")
+                    input.form_input(class= "form_input_name", type= "text", name= "form", placeholder= "Mollie Medina")
+                    input.form_input(class= "form_input_mail", type= "text", name= "form", placeholder= "Email")
+                    .form_wraper_button
+                        button.button(class= "button-form", type= "submit", name= "form")= bValue
